@@ -1,12 +1,13 @@
 namespace Leaderboard
 {
-    public partial class Form1 : Form
+    public partial class KlikaciHraDominikVins : Form
     {
         internal Player player { get; set; }
-        public Form1()
+        public KlikaciHraDominikVins()
         {
             this.Show();
             InitializeComponent();
+            this.Name = "Klikací hra - Dominik Vinš";
         }
 
         private void Form1_Load(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace Leaderboard
         Player player;
         public int time = 2000;
         internal List<Squares>? list { get; set; } = new List<Squares>();
-        public Game(Form1 form)
+        public Game(KlikaciHraDominikVins form)
         {
             InitializeComponent();
             timer1.Interval = time;

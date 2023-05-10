@@ -11,14 +11,19 @@ namespace Leaderboard
         Random rnd = new Random();
         Game game;
         Player player;
+        bool doubleClick;
         internal Panel p { get; set; }
         internal int zivotnost;
         public Squares(Game game, Player player) {
             this.game = game;
             this.player = player;
             CreateSquare(game);
-            
+            this.doubleClick = Chance();
             this.zivotnost = 10000;
+        }
+        bool Chance()
+        {
+            return rnd.Next(2) == 1;
         }
         void CreateSquare(Game game) { 
             p = new Panel();
@@ -31,21 +36,39 @@ namespace Leaderboard
 
         private void P_Click(object? sender, EventArgs e)
         {
-            game.label_scoreCount.Text = "" + ++player.score;
-            game.panel_gamePanel.Controls.Remove(sender as Panel);
-            foreach (var item in game.list)
+            for (int i = game.list.Count - 1; i >= 0; i--)
             {
-                if (item.p == sender as Panel)
+                Squares item = game.list[i];
+                if (item.p is Panel panel && panel == sender)
                 {
-                    game.list.Remove(item);
+                    if (item.doubleClick)
+                    {
+                        item.doubleClick = false;
+                    }
+                    else
+                    {
+                        if (Chance())
+                        {
+                            player.score += 2;
+                            game.label_scoreCount.Text = player.score.ToString();
+                        }
+                        else
+                        {
+                            game.label_scoreCount.Text = (++player.score).ToString();
+                        }
+                        
+                        game.list.RemoveAt(i);
+                        game.panel_gamePanel.Controls.Remove(panel);
+
+                        if (game.time > 1000)
+                        {
+                            game.time -= 5;
+                        }
+                    }
                     break;
                 }
             }
 
-            if(game.time > 1000)
-            {
-                game.time -= 5;
-            }
         }
 
         Point GeneratePoint(Game game, Panel p) { 
