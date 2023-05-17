@@ -34,5 +34,12 @@ namespace Leaderboard
             //exit
             Application.Exit();
         }
+
+        private void btnZebricek_Click(object sender, EventArgs e)
+        {
+            Zebricek z = new Zebricek();
+            this.Hide();
+            z.Show();
+        }
     }
 }

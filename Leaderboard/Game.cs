@@ -1,24 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using SimpleTCP;
 
 namespace Leaderboard
 {
+
     public partial class Game : Form
     {
+        static SimpleTcpClient client;
         Player player;
+
         public int time = 2000;
         internal List<Squares>? list { get; set; } = new List<Squares>();
         public Game(KlikaciHraDominikVins form)
         {
             InitializeComponent();
+
+            client = new SimpleTcpClient();
+            client.StringEncoder = System.Text.Encoding.UTF8;
+            client.Connect("127.0.0.1", 80);
+
             timer1.Interval = time;
             player = form.player;
             lblUsername.Text = $"Username: {player.jmeno}";
@@ -91,19 +92,33 @@ namespace Leaderboard
             }
         }
 
-        void KontrolaZivotu() 
+        void KontrolaZivotu()
         {
             if (player.lives == 0)
             {
+                string data = $"{player.jmeno} {player.score}";
+                client.WriteLine(data);
+                client.DataReceived += (sender, args) =>
+                {
+                    // Process the response from the server if needed
+                    MessageBox.Show(args.MessageString);
+                };
+
                 GameOverForm gm = new GameOverForm();
                 this.Hide();
                 gm.Show();
             }
         }
 
+
         private void Game_FormClosed(object sender, FormClosedEventArgs e)
         {
-            System.Windows.Forms.Application.Exit();
+            Application.Exit();
+        }
+
+        private void Game_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            client.Disconnect();
         }
     }
 }

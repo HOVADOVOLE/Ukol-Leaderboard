@@ -96,6 +96,7 @@
             this.btnZebricek.Text = "Žebříček";
             this.btnZebricek.UseMnemonic = false;
             this.btnZebricek.UseVisualStyleBackColor = true;
+            this.btnZebricek.Click += new System.EventHandler(this.btnZebricek_Click);
             // 
             // KlikaciHraDominikVins
             // 

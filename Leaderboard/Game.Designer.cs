@@ -115,6 +115,7 @@
             this.Name = "Game";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Klikací hra - Dominik Vinš";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Game_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Game_FormClosed);
             this.Load += new System.EventHandler(this.Game_Load);
             this.ResumeLayout(false);

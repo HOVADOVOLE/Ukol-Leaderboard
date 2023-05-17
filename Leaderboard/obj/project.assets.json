@@ -1,11 +1,73 @@
 {
   "version": 3,
   "targets": {
-    "net6.0-windows7.0": {}
+    "net6.0-windows7.0": {
+      "SimpleTCP/1.0.24": {
+        "type": "package",
+        "compile": {
+          "lib/net45/SimpleTCP.dll": {}
+        },
+        "runtime": {
+          "lib/net45/SimpleTCP.dll": {}
+        }
+      },
+      "SuperSimpleTcp/3.0.10": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/SuperSimpleTcp.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/SuperSimpleTcp.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "SimpleTCP/1.0.24": {
+      "sha512": "mQEKbXruksWRmKeUuID7S+Ltg092EiWXwnomnVYohkY+/rTRiIp4PUTE/bdBEj6oh1gIt0lp4l0GBlwtOhqU5w==",
+      "type": "package",
+      "path": "simpletcp/1.0.24",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/SimpleTCP.dll",
+        "simpletcp.1.0.24.nupkg.sha512",
+        "simpletcp.nuspec"
+      ]
+    },
+    "SuperSimpleTcp/3.0.10": {
+      "sha512": "vpWZQQcXWuc7BFA+vuSMSc30WTxgzV2EP7ln6PgJotDzG+G+7h7g6+lnuwjnA9OlZAnqe+sQ98V29fuLDNq3yw==",
+      "type": "package",
+      "path": "supersimpletcp/3.0.10",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "icon.png",
+        "lib/net461/SimpleTcp.xml",
+        "lib/net461/SuperSimpleTcp.dll",
+        "lib/net48/SuperSimpleTcp.dll",
+        "lib/net5.0/SimpleTcp.xml",
+        "lib/net5.0/SuperSimpleTcp.dll",
+        "lib/net6.0/SimpleTcp.xml",
+        "lib/net6.0/SuperSimpleTcp.dll",
+        "lib/net7.0/SuperSimpleTcp.dll",
+        "lib/netcoreapp3.1/SimpleTcp.xml",
+        "lib/netcoreapp3.1/SuperSimpleTcp.dll",
+        "lib/netstandard2.0/SimpleTcp.xml",
+        "lib/netstandard2.0/SuperSimpleTcp.dll",
+        "lib/netstandard2.1/SimpleTcp.xml",
+        "lib/netstandard2.1/SuperSimpleTcp.dll",
+        "supersimpletcp.3.0.10.nupkg.sha512",
+        "supersimpletcp.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0-windows7.0": []
+    "net6.0-windows7.0": [
+      "SimpleTCP >= 1.0.24",
+      "SuperSimpleTcp >= 3.0.10"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Domča\\.nuget\\packages\\": {},
@@ -50,6 +112,16 @@
     "frameworks": {
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
+        "dependencies": {
+          "SimpleTCP": {
+            "target": "Package",
+            "version": "[1.0.24, )"
+          },
+          "SuperSimpleTcp": {
+            "target": "Package",
+            "version": "[3.0.10, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
@@ -72,5 +144,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Balíček SimpleTCP 1.0.24 se místo cílové verze rozhraní .NET Framework projektu net6.0-windows7.0 obnovil pomocí .NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1. Balíček nemusí být plně kompatibilní s vaším projektem.",
+      "libraryId": "SimpleTCP",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

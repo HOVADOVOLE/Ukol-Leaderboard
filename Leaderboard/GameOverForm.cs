@@ -16,5 +16,12 @@ namespace Leaderboard
         {
             InitializeComponent();
         }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            KlikaciHraDominikVins m = new();
+            m.Show();
+            this.Hide();
+        }
     }
 }

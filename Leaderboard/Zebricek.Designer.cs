@@ -1,6 +1,6 @@
 ﻿namespace Leaderboard
 {
-    partial class GameOverForm
+    partial class Zebricek
     {
         /// <summary>
         /// Required designer variable.
@@ -29,48 +29,45 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnMenu = new System.Windows.Forms.Button();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(234, 79);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(291, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 54);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Game over";
+            this.label1.Size = new System.Drawing.Size(165, 51);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Žebříček";
             // 
-            // btnMenu
+            // listBox1
             // 
-            this.btnMenu.Location = new System.Drawing.Point(14, 11);
-            this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(75, 23);
-            this.btnMenu.TabIndex = 1;
-            this.btnMenu.Text = "Do menu";
-            this.btnMenu.UseVisualStyleBackColor = true;
-            this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 15;
+            this.listBox1.Location = new System.Drawing.Point(170, 144);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(442, 259);
+            this.listBox1.TabIndex = 2;
             // 
-            // GameOverForm
+            // Zebricek
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 338);
-            this.Controls.Add(this.btnMenu);
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "GameOverForm";
+            this.Name = "Zebricek";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "GameOverForm";
+            this.Text = "Zebricek";
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
         private Label label1;
-        private Button btnMenu;
+        private ListBox listBox1;
     }
 }
