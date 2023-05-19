@@ -1,6 +1,6 @@
 ﻿namespace Leaderboard
 {
-    partial class KlikaciHraDominikVins
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.
@@ -98,7 +98,7 @@
             this.btnZebricek.UseVisualStyleBackColor = true;
             this.btnZebricek.Click += new System.EventHandler(this.btnZebricek_Click);
             // 
-            // KlikaciHraDominikVins
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,7 +110,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "KlikaciHraDominikVins";
+            this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

@@ -12,7 +12,7 @@ namespace Leaderboard
 
         public int time = 2000;
         internal List<Squares>? list { get; set; } = new List<Squares>();
-        public Game(KlikaciHraDominikVins form)
+        public Game(Form1 form)
         {
             InitializeComponent();
 

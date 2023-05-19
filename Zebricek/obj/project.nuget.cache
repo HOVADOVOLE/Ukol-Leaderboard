@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "AnMb5FTNr/gpIICOX95ZdxJHaDh22f1VqjKefIoCoGmTrET5NN4uXt1HlmJ74S+iAn5QpS+0isSF4uogN2QiFA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Domča\\source\\repos\\2. ročník\\LeaderBoard-main\\Zebricek\\Zebricek.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Domča\\.nuget\\packages\\simpletcp\\1.0.24\\simpletcp.1.0.24.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Balíček SimpleTCP 1.0.24 se místo cílové verze rozhraní .NET Framework projektu net6.0-windows7.0 obnovil pomocí .NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1. Balíček nemusí být plně kompatibilní s vaším projektem.",
+      "libraryId": "SimpleTCP",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}

@@ -6,10 +6,9 @@ C:\Users\Domča\source\repos\2. ročník\LeaderBoard-main\Leaderboard\bin\Debug\
 C:\Users\Domča\source\repos\2. ročník\LeaderBoard-main\Leaderboard\bin\Debug\net6.0-windows\SimpleTCP.dll
 C:\Users\Domča\source\repos\2. ročník\LeaderBoard-main\Leaderboard\bin\Debug\net6.0-windows\SuperSimpleTcp.dll
 C:\Users\Domča\source\repos\2. ročník\LeaderBoard-main\Leaderboard\obj\Debug\net6.0-windows\Leaderboard.csproj.AssemblyReference.cache
-C:\Users\Domča\source\repos\2. ročník\LeaderBoard-main\Leaderboard\obj\Debug\net6.0-windows\Leaderboard.KlikaciHraDominikVins.resources
+C:\Users\Domča\source\repos\2. ročník\LeaderBoard-main\Leaderboard\obj\Debug\net6.0-windows\Leaderboard.Form1.resources
 C:\Users\Domča\source\repos\2. ročník\LeaderBoard-main\Leaderboard\obj\Debug\net6.0-windows\Leaderboard.Game.resources
 C:\Users\Domča\source\repos\2. ročník\LeaderBoard-main\Leaderboard\obj\Debug\net6.0-windows\Leaderboard.GameOverForm.resources
-C:\Users\Domča\source\repos\2. ročník\LeaderBoard-main\Leaderboard\obj\Debug\net6.0-windows\Leaderboard.Zebricek.resources
 C:\Users\Domča\source\repos\2. ročník\LeaderBoard-main\Leaderboard\obj\Debug\net6.0-windows\Leaderboard.csproj.GenerateResource.cache
 C:\Users\Domča\source\repos\2. ročník\LeaderBoard-main\Leaderboard\obj\Debug\net6.0-windows\Leaderboard.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Domča\source\repos\2. ročník\LeaderBoard-main\Leaderboard\obj\Debug\net6.0-windows\Leaderboard.AssemblyInfoInputs.cache

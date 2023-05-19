@@ -1,9 +1,9 @@
 namespace Leaderboard
 {
-    public partial class KlikaciHraDominikVins : Form
+    public partial class Form1 : Form
     {
         internal Player player { get; set; }
-        public KlikaciHraDominikVins()
+        public Form1()
         {
             this.Show();
             InitializeComponent();
@@ -12,6 +12,7 @@ namespace Leaderboard
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //TODO vymazat
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -37,9 +38,9 @@ namespace Leaderboard
 
         private void btnZebricek_Click(object sender, EventArgs e)
         {
-            Zebricek z = new Zebricek();
-            this.Hide();
-            z.Show();
+            //Zebricek z = new Zebricek();
+            //this.Hide();
+            //z.Show();
         }
     }
 }
