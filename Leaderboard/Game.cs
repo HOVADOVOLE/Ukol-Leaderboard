@@ -103,10 +103,10 @@ namespace Leaderboard
         {
             if (player.lives == 0)
             {
-                string data = $"{player.jmeno} {player.score}";
+                string data = $"{player.jmeno};{player.score}";
                 client.Send(data);
 
-                GameOverForm gm = new GameOverForm();
+                GameOverForm gm = new GameOverForm(player.score, player.jmeno);
                 this.Hide();
                 gm.Show();
             }

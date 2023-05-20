@@ -9,12 +9,6 @@ namespace Leaderboard
             InitializeComponent();
             this.Name = "Klikací hra - Dominik Vinš";
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            //TODO vymazat
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             //play
@@ -34,13 +28,6 @@ namespace Leaderboard
         {
             //exit
             Application.Exit();
-        }
-
-        private void btnZebricek_Click(object sender, EventArgs e)
-        {
-            //Zebricek z = new Zebricek();
-            //this.Hide();
-            //z.Show();
         }
     }
 }
