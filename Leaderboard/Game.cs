@@ -1,24 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
-using SimpleTCP;
+using SuperSimpleTcp;
+using System.Drawing;
+using System.Linq;
+using System.Windows.Forms;
 
 namespace Leaderboard
 {
-
     public partial class Game : Form
     {
         static SimpleTcpClient client;
         Player player;
 
         public int time = 2000;
-        internal List<Squares>? list { get; set; } = new List<Squares>();
+        internal List<Squares> list { get; set; } = new List<Squares>();
+
         public Game(Form1 form)
         {
             InitializeComponent();
 
-            client = new SimpleTcpClient();
-            client.StringEncoder = System.Text.Encoding.UTF8;
-            client.Connect("127.0.0.1", 80);
+            client = new SimpleTcpClient("127.0.0.1:80");
+            client.Connect();
 
             timer1.Interval = time;
             player = form.player;
@@ -37,10 +39,14 @@ namespace Leaderboard
             OdebiraniZivotnosti();
             UpdateSquares();
         }
-        void GenerateSquare() {
+
+        void GenerateSquare()
+        {
             list.Add(new Squares(this, player));
         }
-        void UpdateSquares() {
+
+        void UpdateSquares()
+        {
             foreach (Squares item in list.ToList())
             {
                 if (item.zivotnost >= 5000)
@@ -70,6 +76,7 @@ namespace Leaderboard
             KontrolaZivotu();
             NactiZivoty();
         }
+
         void NactiZivoty()
         {
             flowLayoutPanel1.Controls.Clear();
@@ -97,19 +104,13 @@ namespace Leaderboard
             if (player.lives == 0)
             {
                 string data = $"{player.jmeno} {player.score}";
-                client.WriteLine(data);
-                client.DataReceived += (sender, args) =>
-                {
-                    // Process the response from the server if needed
-                    MessageBox.Show(args.MessageString);
-                };
+                client.Send(data);
 
                 GameOverForm gm = new GameOverForm();
                 this.Hide();
                 gm.Show();
             }
         }
-
 
         private void Game_FormClosed(object sender, FormClosedEventArgs e)
         {

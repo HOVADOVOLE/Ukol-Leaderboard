@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vF2saPikpBPbERmGBcl37Qk6ynTeShG/2dKnf7zaPirczvNWdvnNHD8c+diu2SHmrHZ6Oxi/cpVAYgqZSnRRkg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Domča\\source\\repos\\2. ročník\\LeaderBoard-main\\Server\\Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Domča\\.nuget\\packages\\supersimpletcp\\3.0.10\\supersimpletcp.3.0.10.nupkg.sha512"
+  ],
+  "logs": []
+}
